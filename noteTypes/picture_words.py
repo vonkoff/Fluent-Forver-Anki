@@ -2,7 +2,6 @@ import genanki
 import CONSTANTS
 
 
-
 # Define the note type
 model = genanki.Model(
     CONSTANTS.picture_words_id,
@@ -35,12 +34,14 @@ model = genanki.Model(
 )
 
 # Create a function to add a new card to the deck
-def add_card(deck, picture, gender_pc_extra, pronunciation, test_spelling):
+
+
+def add_card(deck, word, picture, gender_pc_extra, pronunciation, test_spelling):
     # Create the note for the card
     note = genanki.Note(
         model=model,
-        fields=[picture, gender_pc_extra, pronunciation, test_spelling],
+        fields=[word, picture, gender_pc_extra, pronunciation, test_spelling],
     )
-    
+
     # Add the note to the deck
     deck.add_note(note)

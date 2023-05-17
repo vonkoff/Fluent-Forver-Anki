@@ -37,11 +37,11 @@ model = genanki.Model(
 )
 
 # Create a function to add a new card to the deck
-def add_card(deck, word, picture, extra_info, recording, test_spelling):
+def add_card(deck, front_example, front_picture, front_definitions, back, full_sentence, extra_info, make_2_cards, test_spelling, copy_paste_area):
     # Create the note for the card
     note = genanki.Note(
         model=model,
-        fields=[word, picture, extra_info, recording, test_spelling],
+        fields=[front_example, front_picture, front_definitions, back, full_sentence, extra_info, make_2_cards, test_spelling, copy_paste_area],
     )
     
     # Add the note to the deck
